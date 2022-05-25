@@ -147,3 +147,28 @@
 
 // arr = [-10, -2, -5, -4, -9, -8], n = 6
 // console.log(findElements (arr, n))
+
+// 7 - given a string or number
+// tell if it is a palindrome
+
+// madam im adam (12)
+// 120959021 (9)
+
+// if the number of characters is even, compare the pairs (first,last)
+// if the number is odd
+// remove the spaces
+
+function isPalindrome (input){
+    const j = input.length - 1
+    for (let i=0; i < j ; i++){
+        if(input[i]!==input[j-i]){
+            return 'Not Palindrome'
+        }
+        
+    }
+    return 'Palindrome'
+}
+
+let palindrome = '1209599021'
+
+console.log(isPalindrome(palindrome))
