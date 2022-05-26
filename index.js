@@ -158,17 +158,42 @@
 // if the number is odd
 // remove the spaces
 
-function isPalindrome (input){
-    const j = input.length - 1
-    for (let i=0; i < j ; i++){
-        if(input[i]!==input[j-i]){
-            return 'Not Palindrome'
-        }
+// function isPalindrome (input){
+//     const j = input.length - 1
+//     for (let i=0; i < j ; i++){
+//         if(input[i]!==input[j-i]){
+//             return 'Not Palindrome'
+//         }
         
-    }
-    return 'Palindrome'
-}
+//     }
+//     return 'Palindrome'
+// }
 
-let palindrome = '1209599021'
+// let palindrome = '1209599021'
 
-console.log(isPalindrome(palindrome))
+// console.log(isPalindrome(palindrome))
+
+// 8 - Given a number N, for each integer I in the range from 1 to N inclusive, print one value per line as follows
+//
+// if I is a multiple of 3 and 5, print FizzBuzz
+// if I is a multiple of 3 (but not 5), print Fizz
+// if I is a multiple of 5 (but not 3), print Buzz
+// if I is not a multiple of 3 or 5, print the value of I
+
+// const n = 37
+
+// for(let i=1; i <= n; i++){
+//     if(i%3 === 0 && i%5 === 0){
+//         console.log('FizzBuzz')
+//     } else { 
+//         if (i%3 === 0) {
+//             console.log('Fizz')
+//         } else {
+//             if (i%5 === 0) {
+//                 console.log('Buzz')
+//             } else {
+//                 console.log(i)
+//             }
+//         }
+//     }
+// }
