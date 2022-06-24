@@ -12,7 +12,6 @@
 // const test = 'Hello'
 // console.log(reverse(test));
 
-
 // 2 - how many jewels are stones
 
 // givin a jewel, the match of one or more in a stone is considered a jewel
@@ -41,7 +40,7 @@
 // }
 // console.log(retArrOfEvens(arr))
 
-// 4 - given an array of items called shopping list (milk, bread, eggs) 
+// 4 - given an array of items called shopping list (milk, bread, eggs)
 // and an array of items called cart (beer, chips, salsa, milk), creat a new list of items
 // in shopping list that are not in cart.
 // write a function that works for any 2 lists
@@ -70,26 +69,25 @@
 
 // Example 1:
 
-// Input: 
+// Input:
 // N = 5
 // Arr[] = {15, 2, 45, 12, 7}
 // Output: 2
 // Explanation: Only Arr[2] = 2 exists here.
 // Example 2:
 
-// Input: 
+// Input:
 // N = 1
 // Arr[] = {1}
 // Output: 1
 // Explanation: Here Arr[1] = 1 exists.
 
-// Your Task:  
-// You don't need to read input or print anything. 
+// Your Task:
+// You don't need to read input or print anything.
 // Your task is to complete the function valueEqualToIndex() which takes the array of
 // integers arr[] and n as parameters and returns an array of indices where the given
 // conditions are satisfied. When there is not such element exists then return an empty
 // array of length 0.
-
 
 // function valueEqualToIndex(arr, n) {
 //     let output = []
@@ -108,19 +106,17 @@
 // n = 9, arr = [0, 5, 3, 9, 6, 8, 12, 6, 10]
 // console.log(valueEqualToIndex(arr, n))
 
-
 // 6 - Given an array of N distinct elements, the task is to find all elements in array except two greatest elements in sorted order.
-
 
 // Example 1:
 
-// Input : 
+// Input :
 // a[] = {2, 8, 7, 1, 5}
 // Output :
-// 1 2 5 
+// 1 2 5
 // Explanation :
 // The output three elements have two or
-// more greater elements.   
+// more greater elements.
 // Example 2:
 
 // Input :
@@ -128,11 +124,10 @@
 // Output :
 // -2 -1 3 4
 
-// Your Task:  
+// Your Task:
 // You don't need to read input or print anything. Your task is to complete the function findElements() which takes the array A[] and its size N as inputs and return the vector sorted values denoting the elements in array which have at-least two greater elements than themselves.
 
-
-// function findElements (arr, n){    
+// function findElements (arr, n){
 //     arr.sort()
 //     const max1 = arr.pop()
 //     const max2 = arr.pop()
@@ -164,7 +159,7 @@
 //         if(input[i]!==input[j-i]){
 //             return 'Not Palindrome'
 //         }
-        
+
 //     }
 //     return 'Palindrome'
 // }
@@ -185,7 +180,7 @@
 // for(let i=1; i <= n; i++){
 //     if(i%3 === 0 && i%5 === 0){
 //         console.log('FizzBuzz')
-//     } else { 
+//     } else {
 //         if (i%3 === 0) {
 //             console.log('Fizz')
 //         } else {
@@ -197,3 +192,50 @@
 //         }
 //     }
 // }
+
+// M D C L X V I
+// 1000 500 100 50 10 5 1
+
+// function romanValue(a) {
+//   switch (a) {
+//     case "M":
+//       return 1000;
+//     case "D":
+//       return 500;
+//     case "C":
+//       return 100;
+//     case "L":
+//       return 50;
+//     case "X":
+//       return 10;
+//     case "V":
+//       return 5;
+//     default:
+//       return 1;
+//   }
+// }
+
+// function romanToInt(s) {
+//   let sum = 0;
+//   for (let i = 0; i < s.length; i++) {
+//     j = i + 1;
+//     const firstElem = romanValue(s[i]);
+//     const nextElem = romanValue(s[j]);
+//     // console.log(i, s[i], "=", firstElem, s[j], "=", nextElem);
+//     if (firstElem < nextElem) {
+//       sum += nextElem - firstElem;
+//       i++;
+//     } else {
+//       sum += firstElem;
+//     }
+//     // console.log(sum);
+//   }
+//   return sum;
+// }
+
+// let s = "III";
+// console.log(romanToInt(s));
+// s = "LVIII"; // 58
+// console.log(romanToInt(s));
+// s = "MCMXCIV"; // 1994
+// console.log(romanToInt(s));
