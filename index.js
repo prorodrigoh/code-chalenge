@@ -215,6 +215,7 @@
 //   }
 // }
 
+// [{ M: 1000 }, { D: 500 }, { C: 100 }, { L: 50 }, { X: 10 }, { V: 5 }, { I: 1 }];
 // function romanToInt(s) {
 //   let sum = 0;
 //   for (let i = 0; i < s.length; i++) {
@@ -239,3 +240,59 @@
 // console.log(romanToInt(s));
 // s = "MCMXCIV"; // 1994
 // console.log(romanToInt(s));
+
+// Secret word game
+// Find what is the secret word before you get hanged. You have 5 chances.
+// The word has no more than 15 characters.
+// If there is a repeating character, it will show as many as they are
+//
+// e.g. Heineken - if you pick "e", it will show 3 times at once; n shows twice
+
+const secret = "heineken";
+let arrSecret = secret.split("");
+let used = [];
+let tries = 5;
+let charRepeats = false;
+let answer = [];
+let prevChar = "?";
+
+const guess = (char) => {
+  // game over when the word is found or tries are 0
+  if (!arrSecret || tries < 1) {
+    return;
+  }
+
+  // if i = -1 the char is not in the word
+  const i = arrSecret.findIndex((item) => item === char);
+
+  console.log(prevChar, char, i, tries);
+
+  if (i < 0) {
+    if (prevChar !== char) {
+      tries--;
+      prevChar = char;
+    }
+  } else {
+    prevChar = char;
+    answer[i] = arrSecret[i];
+    arrSecret[i] = "";
+    guess(char);
+  }
+
+  // used chars, right or wrong
+  const j = used.findIndex((item) => item === char);
+  if (j < 0) {
+    used.push(char);
+  }
+};
+
+guess("a");
+guess("k");
+guess("h");
+guess("e");
+guess("j");
+guess("i");
+guess("n");
+console.log(secret);
+console.log(arrSecret);
+console.log(answer);
